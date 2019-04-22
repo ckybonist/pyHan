@@ -1,7 +1,7 @@
 # pyHan
 
 ## 介紹
-此專案爬取中國時報、聯合報 及 Yahoo新聞的新聞資料，並對新聞進行分詞，最終統計詞頻。
+此專案爬取中國時報、聯合報 及 Yahoo新聞的新聞資料，並對新聞進行分詞，最終產生各種長度的詞彙頻率。
 
 ## 分詞
 本專案首先以 [Ngrams](https://ai.googleblog.com/2006/08/all-our-n-gram-are-belong-to-you.html) 產生初步的
@@ -16,6 +16,6 @@
 - beautifulsoup4: 解析 HTML
 
 ## 輸出
-- 此程式的輸出為長度 2 ~ 5 的詞彙，檔案都放置於 `output/`
+- 此程式輸出長度為 2 ~ 5 的詞彙，檔案皆置於 `output/`
 - `output/lexicon`: 裡面有 MM.json 及 Ngrams.json 兩個檔案，分別紀錄了兩種分詞方法所產生的詞彙
-- `output/stats/ngrams`: 此路徑中含有 ngrams 方法統計出的日、月、年熱門詞彙
+- `output/stats/grams`: 此路徑中含有 ngrams 方法統計出的日、月、年熱門詞彙
