@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BeautifulSoup	ChinaTimes/content.py	/^from bs4 import BeautifulSoup$/;"	i
+BeautifulSoup	ChinaTimes/pyIndex.py	/^from bs4 import BeautifulSoup$/;"	i
+RssHref	ChinaTimes/pyIndex.py	/^   def RssHref(self):$/;"	m	class:parseIndexPage	access:public
+__init__	ChinaTimes/content.py	/^   def __init__(self):$/;"	m	class:getContent	access:public
+__init__	ChinaTimes/pyIndex.py	/^   def __init__(self):$/;"	m	class:parseIndexPage	access:public
+feedparser	ChinaTimes/content.py	/^import feedparser$/;"	i
+getContent	ChinaTimes/content.py	/^class getContent:$/;"	c	inherits:
+getItemsURL	ChinaTimes/content.py	/^   def getItemsURL(self, channel):$/;"	m	class:getContent	access:public
+index	ChinaTimes/pyIndex.py	/^   index = parseIndexPage()$/;"	v	class:parseIndexPage
+parseIndexPage	ChinaTimes/pyIndex.py	/^class parseIndexPage():$/;"	c	inherits:
+re	ChinaTimes/pyIndex.py	/^import re$/;"	i
+rss	ChinaTimes/content.py	/^from pyIndex import rss$/;"	i
+rss	ChinaTimes/pyIndex.py	/^   rss = index.RssHref() $/;"	v	class:parseIndexPage
+rss	ChinaTimes/pyIndex.py	/^rss = list()$/;"	v
+urllib3	ChinaTimes/content.py	/^import urllib3$/;"	i
+urllib3	ChinaTimes/pyIndex.py	/^import urllib3$/;"	i

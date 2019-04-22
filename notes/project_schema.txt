@@ -1,0 +1,88 @@
+@ Pre-process: Analyze lecture and get word frequence
+
+@ Post-process
+*** Web Page
+   ** Feature:
+      * Filter:
+          - select_time_period => this(year, month, week)
+
+            EX:  IF query = "this week":
+                     rd
+          # display: The hot words in time period
+      
+      * Searching words:
+          - get word frequence
+          # display: The word frequence(may be add the category of word by analyzing words freq)
+
+
+      * Upload a lecture to classify its category(optional) 
+
+
+
+@Database
+*** Redis
+   ** Hash:
+      *key => total_detail
+
+      """ 特定時間區段之熱門詞彙 
+
+          key =>(year, month, week_num)
+      """
+      * key => year_month: 
+               refs -> dict_refs{...}
+
+               w_week_num -> Corpus[
+                  unigrams  -> dict_unigrams{...},
+                  bigrams   -> dict_bigrams{...}, 
+                  trigrams  -> dict_trigrams{...},  
+                  fourgrams -> dict_fourgrams{...},
+               ]
+
+               w_week_num -> Corpus[
+                  unigrams  -> dict_unigrams{...},
+                  bigrams   -> dict_bigrams{...}, 
+                  trigrams  -> dict_trigrams{...},  
+                  fourgrams -> dict_fourgrams{...},
+               ]
+
+               w_week_num -> Corpus[
+                  unigrams  -> dict_unigrams{...},
+                  bigrams   -> dict_bigrams{...}, 
+                  trigrams  -> dict_trigrams{...},  
+                  fourgrams -> dict_fourgrams{...},
+               ]
+
+               w_week_num -> Corpus[
+                  unigrams  -> dict_unigrams{...},
+                  bigrams   -> dict_bigrams{...}, 
+                  trigrams  -> dict_trigrams{...},  
+                  fourgrams -> dict_fourgrams{...},
+               ]
+      
+      * key => corpus_history: 
+               total_zi -> int()
+               total_temrs -> int()
+               total_article -> int()
+               proc_total -> list[Jan, Feb, Mar, ..., Dec]
+               corpora -> dict_grams{    
+				    'uni':{...},
+				    'bi':{...},
+                                    'tri':{...},
+                                    'four':{...},
+				}
+
+
+### Efficient I/O of DB
+
+# In data input, change the big object to json format by using
+  "json.JSONDecoder.decode(big_obj)" then store it in
+
+# when pipeout data, use "json.JSONEncoder.encode(big_obj)" will faster
+  then python ast.literal_eval(big_obj)
+
+
+
+
+
+
+# End of Schema
